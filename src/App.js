@@ -2,7 +2,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Feed } from './components/Feed';
-import { MessageSender } from './components/MessageSender';
+// import { MessageSender } from './components/MessageSender';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       {/* Feed Component  */}
         <Feed />
       {/* Message sendeer component */}
-        <MessageSender />
+        {/* <MessageSender /> */}
       </div>
     </div>
   );
