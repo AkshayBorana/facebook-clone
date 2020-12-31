@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Feed } from './components/Feed';
+import { Widgets } from './components/Widgets';
 // import { MessageSender } from './components/MessageSender';
 
 function App() {
@@ -10,12 +11,9 @@ function App() {
       <Header />
 
       <div className="app__body">
-      {/* Side bar component */}
         <Sidebar />
-      {/* Feed Component  */}
         <Feed />
-      {/* Message sendeer component */}
-        {/* <MessageSender /> */}
+        <Widgets />
       </div>
     </div>
   );
