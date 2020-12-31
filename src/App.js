@@ -3,18 +3,28 @@ import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Feed } from './components/Feed';
 import { Widgets } from './components/Widgets';
+import { Login } from './components/Login';
 // import { MessageSender } from './components/MessageSender';
 
 function App() {
+
+  const user = null;
+
   return (
     <div className="app">
-      <Header />
+      {!user ?
 
-      <div className="app__body">
-        <Sidebar />
-        <Feed />
-        <Widgets />
-      </div>
+        <Login /> :
+
+        <>
+          <Header />
+          <div className="app__body">
+            <Sidebar />
+            <Feed />
+            <Widgets />
+          </div>
+        </>
+      }
     </div>
   );
 }
