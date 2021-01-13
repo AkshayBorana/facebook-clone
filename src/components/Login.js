@@ -1,11 +1,25 @@
 import React from 'react';
 import './Login.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { auth, provider } from '../firebase';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
 
 export const Login = () => {
 
-    const signIn = () => {
+    const [state, dispatch] = useStateValue();
 
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .then(res => {
+                dispatch({
+                    type: actionTypes.SET_USER,
+                    user: res.user
+                });
+            })
+            .catch(err => {
+                alert(err.message);
+            })
     }
 
     return (

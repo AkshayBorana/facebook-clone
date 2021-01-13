@@ -4,11 +4,12 @@ import { Sidebar } from './components/Sidebar';
 import { Feed } from './components/Feed';
 import { Widgets } from './components/Widgets';
 import { Login } from './components/Login';
-// import { MessageSender } from './components/MessageSender';
+import { useStateValue } from './StateProvider';
 
 function App() {
 
-  const user = null;
+  const [ state, dispatch ] = useStateValue();
+  const { user } = state;
 
   return (
     <div className="app">
